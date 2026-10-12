@@ -1,0 +1,3196 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   DDN HEADER
+======================================== */
+
+.ddn-header {
+    width: 100%;
+    background: #faf7f2;
+    color: #27241f;
+    position: relative;
+    z-index: 999;
+}
+
+.ddn-logo-image {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.ddn-header-inner {
+    /* width: 100%; */
+    max-width: 1920px;
+    /* min-height: 387px; */
+
+    margin: 0 auto;
+    padding-top: 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.ddn-logo {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content;
+
+    color: #211f1c;
+    text-decoration: none;
+
+    line-height: 0.78;
+
+    transition: opacity 0.3s ease;
+}
+
+.ddn-logo:hover {
+    color: #211f1c;
+    opacity: 0.8;
+}
+
+.ddn-logo-first {
+    display: block;
+
+    font-family: "Bodoni Moda",
+        "Bodoni 72",
+        "Didot",
+        "Times New Roman",
+        serif;
+
+    font-size: 61px;
+    font-weight: 400;
+    letter-spacing: -3.8px;
+
+    margin-left: 2px;
+}
+
+.ddn-logo-second {
+    display: block;
+
+    font-family: "Bodoni Moda",
+        "Bodoni 72",
+        "Didot",
+        "Times New Roman",
+        serif;
+
+    font-size: 61px;
+    font-weight: 400;
+    letter-spacing: -4.8px;
+
+    white-space: nowrap;
+}
+
+.ddn-logo-second small {
+    font-family: "Times New Roman", serif;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    letter-spacing: -1.5px;
+
+    margin-left: 3px;
+}
+
+
+/* ========================================
+   DESKTOP NAVIGATION
+======================================== */
+
+.ddn-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 68px;
+
+    margin-top: 58px;
+}
+
+.ddn-nav-link {
+    position: relative;
+
+    display: inline-block;
+
+    color: #45413a;
+    text-decoration: none;
+
+    font-family: "Bodoni Moda",
+        "Bodoni 72",
+        "Didot",
+        "Times New Roman",
+        serif;
+
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    padding: 0 0 13px;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.ddn-nav-link:hover {
+    color: #211f1c;
+}
+
+.ddn-nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: #27241f;
+
+    transition: width 0.3s ease;
+}
+
+.ddn-nav-link:hover::after {
+    width: 100%;
+}
+
+.ddn-nav-link.ddn-active::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   MOBILE BUTTON
+======================================== */
+
+.ddn-menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 38px;
+
+    padding: 7px;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.ddn-menu-toggle span {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin: 6px 0;
+
+    background: #27241f;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ========================================
+   MOBILE NAV
+======================================== */
+
+.ddn-mobile-nav {
+    display: none;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+
+    .ddn-header-inner {
+        min-height: 330px;
+        padding-top: 42px;
+    }
+
+    .ddn-logo-first,
+    .ddn-logo-second {
+        font-size: 54px;
+    }
+
+    .ddn-logo-first {
+        letter-spacing: -3.3px;
+    }
+
+    .ddn-logo-second {
+        letter-spacing: -4.2px;
+    }
+
+    .ddn-logo-second small {
+        font-size: 21px;
+    }
+
+    .ddn-nav {
+        gap: 48px;
+        margin-top: 52px;
+    }
+
+    .ddn-nav-link {
+        font-size: 19px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+    .ddn-header {
+        background: #eeeadb;
+    }
+
+    .ddn-header-inner {
+        min-height: auto;
+
+        padding: 28px 24px 27px;
+
+        position: relative;
+    }
+
+
+    /* Logo */
+
+    .ddn-logo {
+        align-self: flex-start;
+    }
+
+    .ddn-logo-first {
+        font-size: 40px;
+        letter-spacing: -2.5px;
+    }
+
+    .ddn-logo-second {
+        font-size: 40px;
+        letter-spacing: -3px;
+    }
+
+    .ddn-logo-second small {
+        font-size: 16px;
+        letter-spacing: -1px;
+    }
+
+
+    /* Hide desktop nav */
+
+    .ddn-nav {
+        display: none;
+    }
+
+
+    /* Menu button */
+
+    .ddn-menu-toggle {
+        display: block;
+
+        position: absolute;
+
+        top: 29px;
+        right: 22px;
+    }
+
+
+    /* Mobile navigation */
+
+    .ddn-mobile-nav {
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        padding: 8px 24px 25px;
+
+        border-top: 1px solid rgba(39, 36, 31, 0.15);
+    }
+
+    .ddn-mobile-nav.ddn-open {
+        display: flex;
+    }
+
+    .ddn-mobile-link {
+        display: block;
+
+        padding: 14px 0;
+
+        color: #45413a;
+
+        text-decoration: none;
+
+        font-family: "Bodoni Moda",
+            "Bodoni 72",
+            "Didot",
+            "Times New Roman",
+            serif;
+
+        font-size: 20px;
+        font-style: italic;
+
+        border-bottom: 1px solid rgba(39, 36, 31, 0.1);
+    }
+
+    .ddn-mobile-link:last-child {
+        border-bottom: 0;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+    .ddn-header-inner {
+        padding: 25px 20px 24px;
+    }
+
+    .ddn-logo-first {
+        font-size: 34px;
+        letter-spacing: -2.1px;
+    }
+
+    .ddn-logo-second {
+        font-size: 34px;
+        letter-spacing: -2.5px;
+    }
+
+    .ddn-logo-second small {
+        font-size: 14px;
+    }
+
+    .ddn-menu-toggle {
+        top: 25px;
+        right: 16px;
+    }
+}
+
+/* =========================================
+   DDN HERO
+========================================= */
+
+.ddn-hero {
+    position: relative;
+
+    width: 100%;
+    /* min-height: 850px; */
+
+    overflow: hidden;
+
+    background: #faf7f2;
+
+    color: #292620;
+}
+
+
+/* =========================================
+   HERO INNER
+========================================= */
+
+.ddn-hero-inner {
+    position: relative;
+    z-index: 2;
+
+    width: min(990px, calc(100% - 60px));
+
+    /* min-height: 850px; */
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+
+    padding-top: 85px;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.ddn-hero-image-wrap {
+    position: relative;
+
+    flex: 0 0 435px;
+
+    width: 435px;
+    height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 220px 220px 0 0;
+}
+
+.ddn-hero-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.ddn-hero-content {
+    width: 480px;
+
+    margin-left: 62px;
+
+    padding-top: 116px;
+}
+
+
+/* Intro */
+
+.ddn-hero-intro {
+    margin: 0 0 39px;
+
+    font-family:
+        "Bodoni Moda",
+        "Bodoni 72",
+        "Didot",
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    color: #302d27;
+}
+
+
+/* Description */
+
+.ddn-hero-description {
+    max-width: 470px;
+
+    font-family:
+        "Bodoni Moda",
+        "Bodoni 72",
+        "Didot",
+        "Times New Roman",
+        serif;
+
+    font-size: 23px;
+    font-weight: 400;
+
+    line-height: 1.48;
+
+    color: #302d27;
+}
+
+
+/* =========================================
+   CONNECT BUTTON
+========================================= */
+
+.ddn-hero-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 214px;
+    height: 64px;
+
+    margin-top: 70px;
+
+    border: 1px solid #575148;
+    border-radius: 50px;
+
+    color: #3b3730;
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.ddn-hero-button::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -100%;
+
+    width: 110%;
+    height: 110%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #3d3931;
+
+    transition: bottom 0.4s ease;
+}
+
+.ddn-hero-button span {
+    position: relative;
+    z-index: 2;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+}
+
+.ddn-hero-button:hover {
+    color: #eeeadb;
+    border-color: #3d3931;
+}
+
+.ddn-hero-button:hover::before {
+    bottom: -5%;
+}
+
+
+/* =========================================
+   GRAIN / TEXTURE
+========================================= */
+
+.ddn-hero-noise {
+    position: absolute;
+
+    z-index: 1;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 62%;
+
+    pointer-events: none;
+
+    opacity: 0.28;
+
+    /* background-image:
+        radial-gradient(rgba(104, 83, 56, 0.32) 0.7px,
+            transparent 0.8px); */
+
+    background-size: 3px 3px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.2) 18%,
+            black 65%,
+            black 100%);
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.2) 18%,
+            black 65%,
+            black 100%);
+}
+
+
+/* =========================================
+   SOFT GOLDEN GLOW
+========================================= */
+
+.ddn-hero::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    left: -5%;
+    bottom: -30%;
+
+    width: 110%;
+    height: 70%;
+
+    pointer-events: none;
+
+    /* background:
+        radial-gradient(ellipse at center,
+            rgba(201, 165, 117, 0.18) 0%,
+            rgba(201, 165, 117, 0.08) 38%,
+            transparent 72%); */
+}
+
+
+/* =========================================
+   PAUSE BUTTON
+========================================= */
+
+.ddn-hero-pause {
+    position: absolute;
+
+    z-index: 5;
+
+    right: 14px;
+    bottom: 87px;
+
+    width: 31px;
+    height: 31px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #6a5943;
+
+    cursor: pointer;
+}
+
+.ddn-hero-pause span {
+    display: block;
+
+    width: 2px;
+    height: 9px;
+
+    background: #f2eee2;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .ddn-hero-inner {
+        width: min(850px, calc(100% - 50px));
+    }
+
+    .ddn-hero-image-wrap {
+        flex: 0 0 380px;
+
+        width: 380px;
+        height: 600px;
+
+        border-radius: 190px 190px 0 0;
+    }
+
+    .ddn-hero-content {
+        margin-left: 48px;
+        padding-top: 95px;
+    }
+
+    .ddn-hero-description {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================
+   TABLET / SMALL DESKTOP
+========================================= */
+
+@media (max-width: 900px) {
+
+    .ddn-hero {
+        min-height: auto;
+    }
+
+    .ddn-hero-inner {
+        width: min(700px, calc(100% - 50px));
+
+        min-height: auto;
+
+        padding-top: 70px;
+        padding-bottom: 100px;
+
+        align-items: center;
+    }
+
+    .ddn-hero-image-wrap {
+        flex: 0 0 330px;
+
+        width: 330px;
+        height: 520px;
+
+        border-radius: 165px 165px 0 0;
+    }
+
+    .ddn-hero-content {
+        margin-left: 40px;
+        padding-top: 0;
+    }
+
+    .ddn-hero-intro {
+        font-size: 21px;
+        margin-bottom: 30px;
+    }
+
+    .ddn-hero-description {
+        font-size: 19px;
+        line-height: 1.5;
+    }
+
+    .ddn-hero-button {
+        width: 190px;
+        height: 58px;
+
+        margin-top: 50px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .ddn-hero {
+        min-height: auto;
+    }
+
+    .ddn-hero-inner {
+        width: calc(100% - 40px);
+
+        min-height: auto;
+
+        padding-top: 55px;
+        padding-bottom: 100px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    /* Image */
+
+    .ddn-hero-image-wrap {
+        flex: none;
+
+        width: min(390px, 100%);
+        height: 500px;
+
+        border-radius: 195px 195px 0 0;
+    }
+
+
+    /* Content */
+
+    .ddn-hero-content {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding-top: 48px;
+
+        text-align: left;
+    }
+
+    .ddn-hero-intro {
+        margin-bottom: 25px;
+
+        font-size: 21px;
+    }
+
+    .ddn-hero-description {
+        max-width: 500px;
+
+        font-size: 20px;
+
+        line-height: 1.48;
+    }
+
+
+    /* Button */
+
+    .ddn-hero-button {
+        width: 190px;
+        height: 58px;
+
+        margin-top: 40px;
+    }
+
+
+    /* Pause */
+
+    .ddn-hero-pause {
+        right: 16px;
+        bottom: 25px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .ddn-hero-inner {
+        width: calc(100% - 32px);
+
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    .ddn-hero-image-wrap {
+        width: 100%;
+        height: 440px;
+
+        border-radius: 160px 160px 0 0;
+    }
+
+    .ddn-hero-content {
+        padding-top: 38px;
+    }
+
+    .ddn-hero-intro {
+        font-size: 20px;
+    }
+
+    .ddn-hero-description {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .ddn-hero-button {
+        width: 180px;
+        height: 55px;
+
+        margin-top: 35px;
+    }
+}
+
+/* =========================================
+   DDN HEALING SECTION
+   ========================================= */
+
+.ddn-healing-section {
+    --ddn-green: #62695a;
+    --ddn-beige: #eeeadb;
+    --ddn-cream: #f4f0e4;
+
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 30%,
+            rgba(255, 255, 255, 0.025) 0 1px,
+            transparent 1px),
+        radial-gradient(circle at 70% 70%,
+            rgba(0, 0, 0, 0.025) 0 1px,
+            transparent 1px),
+        var(--ddn-green);
+
+    /* background-size: 5px 5px, 7px 7px, auto; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOP BEIGE SHAPE
+   ========================================= */
+
+.ddn-top-shape {
+    position: absolute;
+    z-index: 1;
+
+    top: -250px;
+    left: -5%;
+
+    width: 110%;
+    height: 410px;
+
+    background:
+        radial-gradient(circle at 30% 40%,
+            rgba(255, 255, 255, 0.12) 0 1px,
+            transparent 1px),
+        radial-gradient(circle at 75% 65%,
+            rgba(100, 70, 40, 0.08) 0 1px,
+            transparent 1px),
+        #faf7f2;
+
+    /* background-size: 4px 4px, 6px 6px, auto; */
+
+    /* Mép trên phẳng, mép dưới lõm xuống ở giữa */
+    border-radius: 0 0 50% 50% / 0 0 35% 35%;
+
+    /* Bỏ nghiêng */
+    transform: none;
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.ddn-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1180px;
+
+    margin-top: 100px;
+    padding: 40px 30px 70px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.ddn-icon {
+    width: 100px;
+    height: 100px;
+
+    margin-bottom: 48px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* Cream leaf / half-circle */
+
+.ddn-icon-leaf {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 82px;
+    height: 56px;
+
+    background: var(--ddn-cream);
+
+    transform:
+        translateX(-50%) rotate(-14deg);
+
+    border-radius: 100% 0 100% 0;
+}
+
+
+/* Beige rectangular base */
+
+.ddn-icon-base {
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 96px;
+    height: 37px;
+
+    transform: translateX(-50%);
+
+    background: var(--ddn-beige);
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.ddn-description {
+    max-width: 1120px;
+
+    color: var(--ddn-cream);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 31px;
+    line-height: 1.55;
+    font-weight: 400;
+
+    letter-spacing: -0.3px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.ddn-button {
+    margin-top: 48px;
+
+    width: 220px;
+    height: 66px;
+
+    border: 1px solid rgba(244, 240, 228, 0.9);
+    border-radius: 40px;
+
+    color: var(--ddn-cream);
+    background: transparent;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ddn-button:hover {
+    background: var(--ddn-cream);
+    color: var(--ddn-green);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+    .ddn-healing-section {
+        min-height: 700px;
+    }
+
+    .ddn-top-shape {
+        top: -190px;
+        height: 330px;
+    }
+
+    .ddn-content {
+        max-width: 850px;
+        margin-top: 70px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .ddn-icon {
+        margin-bottom: 38px;
+    }
+
+    .ddn-description {
+        font-size: 26px;
+        line-height: 1.5;
+    }
+
+    .ddn-button {
+        margin-top: 40px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .ddn-healing-section {
+        min-height: 650px;
+    }
+
+    .ddn-top-shape {
+        top: -145px;
+        left: -20%;
+
+        width: 140%;
+        height: 270px;
+
+        border-radius: 0 0 50% 50% / 0 0 25% 25%;
+    }
+
+    .ddn-content {
+        margin-top: 45px;
+
+        padding:
+            30px 22px 55px;
+    }
+
+    .ddn-icon {
+        width: 80px;
+        height: 80px;
+
+        margin-bottom: 32px;
+    }
+
+    .ddn-icon-leaf {
+        width: 66px;
+        height: 46px;
+    }
+
+    .ddn-icon-base {
+        width: 76px;
+        height: 30px;
+    }
+
+    .ddn-description {
+        max-width: 100%;
+
+        font-size: 20px;
+        line-height: 1.55;
+
+        letter-spacing: 0;
+    }
+
+    .ddn-button {
+        width: 190px;
+        height: 56px;
+
+        margin-top: 34px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .ddn-healing-section {
+        min-height: 590px;
+    }
+
+    .ddn-top-shape {
+        top: -120px;
+        height: 230px;
+    }
+
+    .ddn-content {
+        margin-top: 30px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .ddn-icon {
+        margin-bottom: 28px;
+    }
+
+    .ddn-description {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .ddn-button {
+        width: 175px;
+        height: 52px;
+
+        margin-top: 30px;
+    }
+}
+
+/* =========================================
+   DDN ABOUT SECTION
+   ========================================= */
+
+.ddn-about-section {
+    --ddn-about-bg: #faf7f2;
+    --ddn-about-green: #62695a;
+    --ddn-about-text: #363631;
+
+    position: relative;
+    width: 100%;
+
+    padding: 120px 40px;
+
+    background: var(--ddn-about-bg);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.ddn-about-container {
+    width: 100%;
+    max-width: 1220px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    column-gap: 90px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   LEFT VISUAL
+   ========================================= */
+
+.ddn-about-visual {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.ddn-about-image-wrap {
+    position: relative;
+
+    width: 485px;
+    height: 700px;
+
+    overflow: hidden;
+
+    border-radius: 500px;
+
+    z-index: 1;
+}
+
+
+.ddn-about-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: saturate(0.8);
+}
+
+
+/* =========================================
+   GREEN CIRCLE
+   ========================================= */
+
+.ddn-about-circle {
+    position: absolute;
+
+    z-index: 2;
+
+    width: 265px;
+    height: 265px;
+
+    left: -12%;
+    bottom: 105px;
+
+    background: var(--ddn-about-green);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.ddn-about-content {
+    width: 100%;
+
+    color: var(--ddn-about-text);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.ddn-about-title {
+    margin: 0 0 30px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 78px;
+    line-height: 0.95;
+
+    font-weight: 400;
+    font-style: italic;
+
+    letter-spacing: -4px;
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.ddn-about-text {
+    max-width: 610px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+.ddn-about-text p {
+    margin: 0 0 32px;
+}
+
+
+.ddn-about-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.ddn-about-text a {
+    color: inherit;
+
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+
+    transition: opacity 0.25s ease;
+}
+
+
+.ddn-about-text a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.ddn-about-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 267px;
+    height: 64px;
+
+    margin-top: 45px;
+
+    border: 1px solid rgba(54, 54, 49, 0.7);
+    border-radius: 40px;
+
+    color: var(--ddn-about-text);
+    background: transparent;
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+.ddn-about-button:hover {
+    background: var(--ddn-about-green);
+    border-color: var(--ddn-about-green);
+
+    color: #eeeadb;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LARGE TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .ddn-about-section {
+        padding: 100px 35px;
+    }
+
+    .ddn-about-container {
+        column-gap: 55px;
+    }
+
+    .ddn-about-image-wrap {
+        width: 420px;
+        height: 610px;
+    }
+
+    .ddn-about-visual {
+        min-height: 610px;
+    }
+
+    .ddn-about-circle {
+        width: 230px;
+        height: 230px;
+
+        left: 0;
+        bottom: 80px;
+    }
+
+    .ddn-about-title {
+        font-size: 68px;
+    }
+
+    .ddn-about-text {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    .ddn-about-section {
+        padding: 80px 30px;
+    }
+
+    .ddn-about-container {
+        grid-template-columns: 1fr;
+
+        row-gap: 70px;
+    }
+
+    .ddn-about-visual {
+        min-height: 600px;
+    }
+
+    .ddn-about-image-wrap {
+        width: 410px;
+        height: 590px;
+    }
+
+    .ddn-about-circle {
+        width: 220px;
+        height: 220px;
+
+        left: calc(50% - 290px);
+        bottom: 50px;
+    }
+
+    .ddn-about-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .ddn-about-title {
+        font-size: 70px;
+    }
+
+    .ddn-about-text {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .ddn-about-section {
+        padding: 65px 20px;
+    }
+
+    .ddn-about-container {
+        row-gap: 55px;
+    }
+
+    .ddn-about-visual {
+        min-height: 480px;
+    }
+
+    .ddn-about-image-wrap {
+        width: 300px;
+        height: 450px;
+    }
+
+    .ddn-about-circle {
+        width: 165px;
+        height: 165px;
+
+        left: calc(50% - 205px);
+        bottom: 25px;
+    }
+
+    .ddn-about-title {
+        margin-bottom: 25px;
+
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+    .ddn-about-text {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .ddn-about-text p {
+        margin-bottom: 25px;
+    }
+
+    .ddn-about-button {
+        width: 235px;
+        height: 58px;
+
+        margin-top: 35px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .ddn-about-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .ddn-about-visual {
+        min-height: 410px;
+    }
+
+    .ddn-about-image-wrap {
+        width: 265px;
+        height: 390px;
+    }
+
+    .ddn-about-circle {
+        width: 145px;
+        height: 145px;
+
+        left: calc(50% - 180px);
+        bottom: 20px;
+    }
+
+    .ddn-about-title {
+        font-size: 52px;
+    }
+
+    .ddn-about-text {
+        font-size: 15.5px;
+    }
+
+    .ddn-about-button {
+        width: 220px;
+    }
+}
+
+/* =========================================
+   DDN EXPERIENCE SECTION
+   ========================================= */
+
+.ddn-experience-section {
+    --ddn-experience-brown: #b28a5c;
+    --ddn-experience-cream: #eeeadb;
+    --ddn-experience-line: rgba(238, 234, 219, 0.8);
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--ddn-experience-brown);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+   ========================================= */
+
+.ddn-experience-content {
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 30% 30%,
+            rgba(255, 255, 255, 0.025) 0 1px,
+            transparent 1px),
+        radial-gradient(circle at 70% 70%,
+            rgba(80, 50, 25, 0.035) 0 1px,
+            transparent 1px),
+        var(--ddn-experience-brown);
+
+    /* background-size:
+        5px 5px,
+        7px 7px,
+        auto; */
+
+    color: var(--ddn-experience-cream);
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   INNER CONTENT
+   ========================================= */
+
+.ddn-experience-inner {
+    width: 100%;
+    max-width: 520px;
+
+    margin: 0 auto;
+
+    padding: 100px 55px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.ddn-experience-description {
+    margin-bottom: 48px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+    line-height: 1.53;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.ddn-experience-description a {
+    color: inherit;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+
+    transition: opacity 0.25s ease;
+}
+
+
+.ddn-experience-description a:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   ACCORDION
+   ========================================= */
+
+.ddn-accordion {
+    width: 100%;
+
+    border-top: 1px solid var(--ddn-experience-line);
+}
+
+
+.ddn-accordion:last-child {
+    border-bottom: 1px solid var(--ddn-experience-line);
+}
+
+
+/* =========================================
+   ACCORDION HEADER
+   ========================================= */
+
+.ddn-accordion-header {
+    width: 100%;
+    min-height: 50px;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--ddn-experience-cream);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ACCORDION TITLE
+   ========================================= */
+
+.ddn-accordion-title {
+    display: block;
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.ddn-accordion-icon {
+    width: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   ACCORDION CONTENT
+   ========================================= */
+
+.ddn-accordion-content {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.35s ease,
+        opacity 0.25s ease;
+}
+
+
+/* =========================================
+   OPEN CONTENT
+   ========================================= */
+
+.ddn-accordion-content.ddn-accordion-open {
+    max-height: 150px;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   LICENSE INFORMATION
+   ========================================= */
+
+.ddn-license-info {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    padding:
+        15px 0 22px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CERTIFICATE
+   ========================================= */
+
+.ddn-certificate-info {
+    padding-bottom: 20px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   RIGHT IMAGE
+   ========================================= */
+
+.ddn-experience-image {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+}
+
+
+.ddn-experience-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    /* Hiệu ứng màu hơi vintage giống ảnh mẫu */
+    filter:
+        saturate(0.72) sepia(0.08) contrast(0.94);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .ddn-experience-inner {
+        max-width: 480px;
+
+        padding:
+            80px 40px;
+    }
+
+    .ddn-experience-description {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .ddn-experience-section {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+    }
+
+
+    /* Nội dung trước */
+    .ddn-experience-content {
+        min-height: auto;
+
+        order: 1;
+    }
+
+
+    .ddn-experience-inner {
+        max-width: 100%;
+
+        padding:
+            70px 25px 65px;
+    }
+
+
+    .ddn-experience-description {
+        margin-bottom: 40px;
+
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+
+    /* Ảnh sau */
+    .ddn-experience-image {
+        order: 2;
+
+        height: 70vw;
+        min-height: 400px;
+        max-height: 650px;
+    }
+
+
+    .ddn-experience-image img {
+        object-position: center;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .ddn-experience-inner {
+        padding:
+            55px 20px 50px;
+    }
+
+
+    .ddn-experience-description {
+        font-size: 16px;
+        line-height: 1.55;
+
+        margin-bottom: 35px;
+    }
+
+
+    .ddn-accordion-header {
+        min-height: 52px;
+
+        font-size: 11px;
+    }
+
+
+    .ddn-license-info {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        padding-bottom: 20px;
+
+        font-size: 11px;
+    }
+
+
+    .ddn-experience-image {
+        height: 100vw;
+
+        min-height: 350px;
+    }
+}
+
+/* =========================================
+   DDN OFFERINGS
+   ========================================= */
+
+.ddn-offerings-section {
+    --ddn-offerings-bg: #faf7f2;
+    --ddn-offerings-text: #363631;
+    --ddn-offerings-green: #62695a;
+    --ddn-offerings-brown: #b28a5c;
+
+    width: 100%;
+    padding: 95px 40px 80px;
+
+    background: var(--ddn-offerings-bg);
+
+    box-sizing: border-box;
+}
+
+
+.ddn-offerings-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.ddn-offerings-title {
+    margin: 0 0 55px;
+
+    color: var(--ddn-offerings-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 76px;
+    line-height: 0.95;
+
+    font-weight: 400;
+    font-style: italic;
+
+    letter-spacing: -4px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   GRID
+   ========================================= */
+
+.ddn-offerings-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 70px;
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.ddn-offering-card {
+    width: 100%;
+
+    text-align: center;
+
+    color: var(--ddn-offerings-text);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   VISUAL
+   ========================================= */
+
+.ddn-offering-visual {
+    position: relative;
+
+    width: 100%;
+    height: 425px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.ddn-offering-image-wrap {
+    position: relative;
+    z-index: 1;
+
+    width: 295px;
+    height: 385px;
+
+    overflow: hidden;
+
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+}
+
+
+.ddn-offering-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter:
+        saturate(0.78) sepia(0.05) contrast(0.95);
+}
+
+
+/* =========================================
+   DECORATIVE SHAPES
+   ========================================= */
+
+.ddn-offering-shape {
+    position: absolute;
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* CARD 1 — quarter circle */
+
+.ddn-offering-shape-brown {
+    width: 145px;
+    height: 145px;
+
+    left: -8px;
+    top: 75px;
+
+    background: var(--ddn-offerings-brown);
+
+    border-radius: 0 100% 0 0;
+}
+
+
+/* CARD 2 — small circle */
+
+.ddn-offering-shape-green {
+    width: 145px;
+    height: 145px;
+
+    right: -5px;
+    bottom: 30px;
+
+    background: var(--ddn-offerings-green);
+
+    border-radius: 50%;
+}
+
+
+/* CARD 3 — half circle */
+
+.ddn-offering-shape-cream {
+    width: 145px;
+    height: 95px;
+
+    right: -5px;
+    top: 145px;
+
+    background: #deddd5;
+
+    border-radius:
+        0 0 100px 100px;
+}
+
+
+/* =========================================
+   CARD TITLE
+   ========================================= */
+
+.ddn-offering-title {
+    margin: 0 0 17px;
+
+    color: var(--ddn-offerings-text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 28px;
+    line-height: 1.2;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.ddn-offering-description {
+    max-width: 310px;
+
+    margin: 0 auto;
+
+    color: var(--ddn-offerings-text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.ddn-offerings-button {
+    width: 155px;
+    height: 53px;
+
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(54, 54, 49, 0.7);
+    border-radius: 50px;
+
+    color: var(--ddn-offerings-text);
+    background: transparent;
+
+    text-decoration: none;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ddn-offerings-button:hover {
+    background: var(--ddn-offerings-green);
+    border-color: var(--ddn-offerings-green);
+
+    color: #eeeadb;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .ddn-offerings-section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .ddn-offerings-grid {
+        column-gap: 35px;
+    }
+
+    .ddn-offerings-title {
+        font-size: 68px;
+    }
+
+    .ddn-offering-image-wrap {
+        width: 245px;
+        height: 340px;
+    }
+
+    .ddn-offering-visual {
+        height: 380px;
+    }
+
+    .ddn-offering-shape-brown {
+        width: 115px;
+        height: 115px;
+    }
+
+    .ddn-offering-shape-green {
+        width: 115px;
+        height: 115px;
+    }
+
+    .ddn-offering-shape-cream {
+        width: 115px;
+        height: 75px;
+    }
+
+    .ddn-offering-title {
+        font-size: 24px;
+    }
+
+    .ddn-offering-description {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .ddn-offerings-section {
+        padding:
+            70px 20px 65px;
+    }
+
+    .ddn-offerings-title {
+        margin-bottom: 45px;
+
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .ddn-offerings-grid {
+        grid-template-columns: 1fr;
+
+        row-gap: 65px;
+    }
+
+    .ddn-offering-visual {
+        height: 390px;
+
+        margin-bottom: 25px;
+    }
+
+    .ddn-offering-image-wrap {
+        width: 280px;
+        height: 365px;
+    }
+
+    .ddn-offering-title {
+        font-size: 27px;
+    }
+
+    .ddn-offering-description {
+        max-width: 350px;
+
+        font-size: 15px;
+    }
+
+    .ddn-offerings-button {
+        margin-top: 55px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 420px) {
+
+    .ddn-offerings-title {
+        font-size: 52px;
+    }
+
+    .ddn-offering-visual {
+        height: 350px;
+    }
+
+    .ddn-offering-image-wrap {
+        width: 245px;
+        height: 325px;
+    }
+
+    .ddn-offering-shape-brown {
+        width: 100px;
+        height: 100px;
+
+        left: 0;
+    }
+
+    .ddn-offering-shape-green {
+        width: 105px;
+        height: 105px;
+
+        right: 0;
+    }
+
+    .ddn-offering-shape-cream {
+        width: 105px;
+        height: 70px;
+
+        right: 0;
+    }
+
+    .ddn-offering-title {
+        font-size: 24px;
+    }
+}
+
+/* ==============================
+   DDN CONTACT SECTION
+================================ */
+
+.ddn-contact {
+    --ddn-bg: #f1eee7;
+    --ddn-text: #383831;
+    --ddn-muted: #74786a;
+    --ddn-line: #77776a;
+
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 34px 24px 40px;
+    color: var(--ddn-text);
+    background-color: #faf7f2;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.ddn-contact *,
+.ddn-contact *::before,
+.ddn-contact *::after {
+    box-sizing: border-box;
+}
+
+.ddn-contact__container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: clamp(60px, 10.5vw, 175px);
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* ==============================
+   CONTENT
+================================ */
+
+.ddn-contact__content {
+    min-width: 0;
+    padding-top: 7px;
+}
+
+.ddn-contact__title {
+    margin: 0 0 23px;
+    color: #383831;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 4vw, 64px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+}
+
+.ddn-contact__intro {
+    max-width: 520px;
+    margin-bottom: 65px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.ddn-contact__intro p {
+    margin: 0 0 17px;
+}
+
+.ddn-contact__intro a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.ddn-contact__intro a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   FORM
+================================ */
+
+.ddn-contact__form {
+    width: 100%;
+}
+
+.ddn-contact__group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.ddn-contact__label {
+    display: inline-block;
+    margin: 0;
+    color: var(--ddn-muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.ddn-contact__label-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ddn-contact__required {
+    color: #828477;
+    font-size: 10px;
+}
+
+.ddn-contact__name-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px;
+    margin-top: 10px;
+}
+
+.ddn-contact__field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.ddn-contact__field input,
+.ddn-contact__input,
+.ddn-contact__textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 0;
+    border: 0;
+    border-bottom: 1px solid var(--ddn-line);
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    color: var(--ddn-text);
+    font: inherit;
+    font-size: 15px;
+    box-shadow: none;
+    transition: border-color 0.25s ease;
+}
+
+.ddn-contact__field input {
+    height: 31px;
+    order: 0;
+}
+
+.ddn-contact__field label {
+    order: 1;
+    padding-top: 5px;
+    color: #74776b;
+    font-size: 10px;
+}
+
+.ddn-contact__field label span {
+    margin-left: 3px;
+    color: #85877c;
+}
+
+.ddn-contact__input {
+    height: 44px;
+    margin-top: 0;
+}
+
+.ddn-contact__textarea {
+    min-height: 83px;
+    padding: 12px 0;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.ddn-contact__group:has(.ddn-contact__label[for="ddn-subject"]) {
+    margin-bottom: 18px;
+}
+
+.ddn-contact__field input:focus,
+.ddn-contact__input:focus,
+.ddn-contact__textarea:focus {
+    border-bottom-color: #383831;
+}
+
+.ddn-contact__submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -8px;
+}
+
+.ddn-contact__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 116px;
+    min-height: 54px;
+    padding: 12px 18px;
+    border: 1px solid #8a8b7c;
+    border-radius: 50px;
+    background: transparent;
+    color: #65695d;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.ddn-contact__button:hover {
+    border-color: #383831;
+    background: #383831;
+    color: #fff;
+}
+
+/* ==============================
+   IMAGE
+================================ */
+
+.ddn-contact__visual {
+    width: 100%;
+    max-width: 500px;
+    height: clamp(500px, 45vw, 750px);
+    max-height: 750px;
+    overflow: hidden;
+    border-radius: 250px 250px 0 0;
+    background: #ddd5c7;
+}
+
+.ddn-contact__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+    .ddn-contact {
+        padding: 35px 28px;
+    }
+
+    .ddn-contact__container {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+        gap: 45px;
+    }
+
+    .ddn-contact__title {
+        font-size: clamp(36px, 4.5vw, 50px);
+        letter-spacing: -1.5px;
+    }
+
+    .ddn-contact__intro {
+        margin-bottom: 45px;
+    }
+
+    .ddn-contact__label {
+        font-size: 27px;
+    }
+
+    .ddn-contact__name-row {
+        gap: 16px;
+    }
+
+    .ddn-contact__visual {
+        height: 590px;
+    }
+}
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 767px) {
+    .ddn-contact {
+        padding: 35px 20px 45px;
+    }
+
+    .ddn-contact__container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+    }
+
+    .ddn-contact__content {
+        padding-top: 0;
+    }
+
+    .ddn-contact__title {
+        margin-bottom: 20px;
+        font-size: clamp(38px, 9vw, 48px);
+        line-height: 1.12;
+        letter-spacing: -1.5px;
+    }
+
+    .ddn-contact__intro {
+        margin-bottom: 42px;
+        font-size: 14px;
+    }
+
+    .ddn-contact__group {
+        margin-bottom: 24px;
+    }
+
+    .ddn-contact__label {
+        font-size: 27px;
+    }
+
+    .ddn-contact__name-row {
+        gap: 18px;
+    }
+
+    .ddn-contact__field label {
+        font-size: 9px;
+    }
+
+    .ddn-contact__textarea {
+        min-height: 75px;
+    }
+
+    .ddn-contact__submit {
+        margin-top: 0;
+    }
+
+    .ddn-contact__visual {
+        width: 100%;
+        max-width: 430px;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        margin: 0 auto;
+        border-radius: 220px 220px 0 0;
+    }
+}
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+    .ddn-contact {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .ddn-contact__title {
+        font-size: 35px;
+    }
+
+    .ddn-contact__name-row {
+        gap: 12px;
+    }
+
+    .ddn-contact__label {
+        font-size: 25px;
+    }
+
+    .ddn-contact__field label {
+        font-size: 8px;
+    }
+}
+
+
+/* Pricing, FAQ and footer additions */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #62695a;
+    outline-offset: 4px
+}
+
+.ddn-pricing-section,
+.ddn-faq-section {
+    box-sizing: border-box
+}
+
+.ddn-eyebrow {
+    margin: 0 0 18px;
+    color: #777763;
+    font: 600 10px/1.5 Arial, sans-serif;
+    letter-spacing: .2em;
+    text-transform: uppercase
+}
+
+.ddn-pricing-section {
+    padding: 115px 30px 120px;
+    background: #faf7f2;
+    color: #302d27
+}
+
+.ddn-pricing-container {
+    max-width: 1180px;
+    margin: auto
+}
+
+.ddn-pricing-container>.ddn-eyebrow,
+.ddn-pricing-title,
+.ddn-pricing-intro {
+    text-align: center
+}
+
+.ddn-pricing-title {
+    margin: 0;
+    font: italic 400 clamp(48px, 6vw, 78px)/1 Georgia, serif;
+    letter-spacing: -3px
+}
+
+.ddn-pricing-intro {
+    max-width: 650px;
+    margin: 25px auto 55px;
+    font: 18px/1.65 Georgia, serif;
+    color: #57554c
+}
+
+.ddn-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px
+}
+
+.ddn-pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 330px;
+    padding: 34px 30px 30px;
+    box-sizing: border-box;
+    border: 1px solid #d0cbbb;
+    background: rgba(255, 255, 255, .24)
+}
+
+.ddn-pricing-card-featured {
+    background: #62695a;
+    color: #f4f0e4;
+    border-color: #62695a
+}
+
+.ddn-pricing-number {
+    font: italic 20px Georgia, serif;
+    opacity: .7
+}
+
+.ddn-pricing-card h3 {
+    margin: 28px 0 14px;
+    font: 400 27px/1.15 Georgia, serif
+}
+
+.ddn-pricing-detail {
+    margin: 0 0 24px;
+    font: 16px/1.65 Georgia, serif;
+    opacity: .88
+}
+
+.ddn-pricing-note {
+    margin: auto 0 20px;
+    font: italic 14px/1.5 Georgia, serif;
+    opacity: .8
+}
+
+.ddn-pricing-link {
+    display: inline-block;
+    padding-bottom: 7px;
+    border-bottom: 1px solid currentColor;
+    color: inherit;
+    text-decoration: none;
+    font: 600 10px/1.5 Arial, sans-serif;
+    letter-spacing: .07em
+}
+
+.ddn-pricing-disclaimer {
+    max-width: 780px;
+    margin: 30px auto 0;
+    color: #777367;
+    text-align: center;
+    font: 13px/1.6 Arial, sans-serif
+}
+
+.ddn-faq-section {
+    padding: 120px 30px;
+    background: #faf7f2
+}
+
+.ddn-faq-container {
+    max-width: 1180px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: clamp(50px, 9vw, 130px);
+    align-items: start
+}
+
+.ddn-faq-heading h2 {
+    margin: 0 0 25px;
+    font: 400 clamp(43px, 5vw, 65px)/.99 Georgia, serif;
+    letter-spacing: -2.5px
+}
+
+.ddn-faq-heading h2 em {
+    font-weight: 400
+}
+
+.ddn-faq-heading>p:not(.ddn-eyebrow) {
+    max-width: 360px;
+    color: #5a574e;
+    font: 17px/1.7 Georgia, serif
+}
+
+.ddn-faq-contact-link {
+    display: inline-block;
+    margin-top: 22px;
+    padding-bottom: 8px;
+    color: #302d27;
+    border-bottom: 1px solid #777367;
+    text-decoration: none;
+    font: 600 10px/1.5 Arial, sans-serif;
+    letter-spacing: .1em
+}
+
+.ddn-faq-item {
+    border-top: 1px solid rgba(48, 45, 39, .25)
+}
+
+.ddn-faq-item:last-child {
+    border-bottom: 1px solid rgba(48, 45, 39, .25)
+}
+
+.ddn-faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 0;
+    border: 0;
+    background: transparent;
+    color: #302d27;
+    text-align: left;
+    cursor: pointer;
+    font: 400 21px/1.35 Georgia, serif
+}
+
+.ddn-faq-icon {
+    flex: 0 0 24px;
+    text-align: center;
+    font: 300 25px/1 Arial, sans-serif
+}
+
+.ddn-faq-answer {
+    padding: 0 35px 22px 0
+}
+
+.ddn-faq-answer p {
+    margin: 0;
+    color: #5a574e;
+    font: 16px/1.7 Georgia, serif
+}
+
+.ddn-footer {
+    padding: 55px 24px 28px;
+    background: #62695a;
+    color: #f4f0e4;
+    text-align: center
+}
+
+.ddn-footer-brand {
+    color: inherit;
+    text-decoration: none;
+    font: 400 35px/1.2 Georgia, serif
+}
+
+.ddn-footer-brand span {
+    font-size: 16px
+}
+
+.ddn-footer p {
+    margin: 14px 0 22px;
+    font: 15px/1.6 Georgia, serif;
+    opacity: .85
+}
+
+.ddn-footer>a:not(.ddn-footer-brand) {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(244, 240, 228, .7);
+    font: 600 10px Arial, sans-serif;
+    letter-spacing: .12em
+}
+
+.ddn-footer small {
+    display: block;
+    margin-top: 45px;
+    font: 11px/1.5 Arial, sans-serif;
+    opacity: .7
+}
+
+@media(max-width:850px) {
+
+    .ddn-pricing-section,
+    .ddn-faq-section {
+        padding: 82px 24px
+    }
+
+    .ddn-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 14px
+    }
+
+    .ddn-pricing-card {
+        min-height: 0;
+        padding: 28px
+    }
+
+    .ddn-pricing-note {
+        margin-top: 0
+    }
+
+    .ddn-faq-container {
+        grid-template-columns: 1fr;
+        gap: 48px
+    }
+
+    .ddn-faq-heading>p:not(.ddn-eyebrow) {
+        max-width: 600px
+    }
+}
+
+@media(max-width:480px) {
+
+    .ddn-pricing-section,
+    .ddn-faq-section {
+        padding: 68px 20px
+    }
+
+    .ddn-pricing-title {
+        letter-spacing: -1.8px
+    }
+
+    .ddn-pricing-intro {
+        font-size: 16px;
+        margin: 20px auto 35px
+    }
+
+    .ddn-pricing-card h3 {
+        font-size: 25px
+    }
+
+    .ddn-faq-question {
+        font-size: 18px;
+        padding: 21px 0
+    }
+
+    .ddn-faq-answer p {
+        font-size: 15px
+    }
+
+    .ddn-footer-brand {
+        font-size: 29px
+    }
+}
