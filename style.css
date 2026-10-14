@@ -106,6 +106,33 @@ body {
 /* ========================================
    DESKTOP NAVIGATION
 ======================================== */
+.ddn-nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Khi nav được ghim */
+.ddn-nav.ddn-nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background: #faf7f2;
+    z-index: 1000;
+}
+
+/* Phần tử giữ chỗ */
+.ddn-nav-placeholder {
+    display: none;
+}
+
+.ddn-nav-placeholder.is-active {
+    display: block;
+}
 
 .ddn-nav {
     display: flex;
@@ -2262,13 +2289,13 @@ textarea:focus-visible {
     box-sizing: border-box
 }
 
-.ddn-eyebrow {
+/* .ddn-eyebrow {
     margin: 0 0 18px;
     color: #777763;
     font: 600 10px/1.5 Arial, sans-serif;
     letter-spacing: .2em;
     text-transform: uppercase
-}
+} */
 
 .ddn-pricing-section {
     padding: 115px 30px 120px;
@@ -2545,5 +2572,127 @@ textarea:focus-visible {
 
     .ddn-footer-brand {
         font-size: 29px
+    }
+}
+
+
+/* Pricing: single service card */
+.ddn-pricing-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.ddn-pricing-card-featured {
+    width: 100%;
+    max-width: 760px;
+    min-height: 0;
+    padding: 42px 46px;
+    background: #d07c4e;
+    color: #f4f0e4;
+    border: 1px solid #d07c4e;
+    border-radius: 10px;
+}
+
+/* Service description */
+.ddn-pricing-card-featured h3 {
+    margin: 25px 0 14px;
+    font-size: 34px;
+}
+
+.ddn-pricing-card-featured .ddn-pricing-detail {
+    max-width: 590px;
+    margin-bottom: 28px;
+    line-height: 1.75;
+}
+
+/* Fee */
+.ddn-pricing-fee {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 28px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(244, 240, 228, .4);
+    border-bottom: 1px solid rgba(244, 240, 228, .4);
+}
+
+.ddn-pricing-fee-label {
+    display: block;
+    margin-bottom: 8px;
+    font: 600 10px/1.5 Arial, sans-serif;
+    letter-spacing: .16em;
+    opacity: .85;
+}
+
+.ddn-pricing-price {
+    margin: 0 0 14px;
+    font: 400 clamp(32px, 5vw, 46px)/1.2 Georgia, serif;
+    letter-spacing: -1px;
+}
+
+.ddn-pricing-duration {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+    font: 15px/1.6 Georgia, serif;
+    opacity: .9;
+}
+
+/* Sliding-scale information */
+.ddn-pricing-support {
+    margin-bottom: 28px;
+}
+
+.ddn-pricing-support .ddn-pricing-note {
+    margin: 0 0 10px;
+    font: italic 20px/1.4 Georgia, serif;
+    opacity: 1;
+}
+
+.ddn-pricing-support-detail {
+    max-width: 610px;
+    margin: 0;
+    font: 15px/1.8 Georgia, serif;
+    opacity: .9;
+}
+
+/* CTA */
+.ddn-pricing-card-featured .ddn-pricing-link {
+    margin-top: 0;
+    padding-bottom: 8px;
+    font-size: 10px;
+    letter-spacing: .09em;
+}
+
+.ddn-pricing-card-featured .ddn-pricing-link:hover {
+    opacity: .7;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .ddn-pricing-card-featured {
+        padding: 28px 24px;
+    }
+
+    .ddn-pricing-card-featured h3 {
+        margin-top: 22px;
+        font-size: 28px;
+    }
+
+    .ddn-pricing-price {
+        font-size: 34px;
+    }
+
+    .ddn-pricing-duration {
+        align-items: flex-start;
+        font-size: 14px;
+    }
+
+    .ddn-pricing-support .ddn-pricing-note {
+        font-size: 18px;
+    }
+
+    .ddn-pricing-support-detail {
+        font-size: 14px;
     }
 }

@@ -11,26 +11,32 @@
 </head>
 
 <body>
+
     <header class="ddn-header">
         <div class="ddn-header-inner">
 
             <!-- Logo -->
             <a href="#" class="ddn-logo">
-                <!-- <span class="ddn-logo-first">Julia</span>
-                <span class="ddn-logo-second">
-                    Jarold,<small> LCSW</small>
-                </span> -->
                 <img src="./Logo_Header.webp" alt="Julia Jarold, LCSW" class="ddn-logo-image">
             </a>
 
-            <!-- Navigation -->
-            <nav class="ddn-nav" aria-label="Main navigation"><a href="#home" class="ddn-nav-link ddn-active">Home</a><a
-                    href="#about" class="ddn-nav-link">About</a><a href="#services" class="ddn-nav-link">Services</a><a
-                    href="#pricing" class="ddn-nav-link">Pricing</a><a href="#contact"
-                    class="ddn-nav-link">Contact</a><a href="#faq" class="ddn-nav-link">FAQ</a></nav>
+            <!-- Navigation wrapper -->
+            <div class="ddn-nav-wrapper">
+
+                <!-- Desktop Navigation -->
+                <nav class="ddn-nav" aria-label="Main navigation">
+                    <a href="#home" class="ddn-nav-link ddn-active">Home</a>
+                    <a href="#about" class="ddn-nav-link">About</a>
+                    <a href="#services" class="ddn-nav-link">Services</a>
+                    <a href="#pricing" class="ddn-nav-link">Pricing</a>
+                    <a href="#contact" class="ddn-nav-link">Contact</a>
+                    <a href="#faq" class="ddn-nav-link">FAQ</a>
+                </nav>
+
+            </div>
 
             <!-- Mobile button -->
-            <button class="ddn-menu-toggle" type="button" aria-label="Open menu">
+            <button class="ddn-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -39,11 +45,16 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <nav class="ddn-mobile-nav" aria-label="Mobile navigation"><a href="#home" class="ddn-mobile-link">Home</a><a
-                href="#about" class="ddn-mobile-link">About</a><a href="#services"
-                class="ddn-mobile-link">Services</a><a href="#pricing" class="ddn-mobile-link">Pricing</a><a
-                href="#contact" class="ddn-mobile-link">Contact</a><a href="#faq" class="ddn-mobile-link">FAQ</a></nav>
+        <nav class="ddn-mobile-nav" aria-label="Mobile navigation">
+            <a href="#home" class="ddn-mobile-link">Home</a>
+            <a href="#about" class="ddn-mobile-link">About</a>
+            <a href="#services" class="ddn-mobile-link">Services</a>
+            <a href="#pricing" class="ddn-mobile-link">Pricing</a>
+            <a href="#contact" class="ddn-mobile-link">Contact</a>
+            <a href="#faq" class="ddn-mobile-link">FAQ</a>
+        </nav>
     </header>
+
     <section class="ddn-hero" id="home">
         <div class="ddn-hero-noise"></div>
 
@@ -175,7 +186,7 @@
 
     </section>
 
-    <section class="ddn-experience-section">
+    <section class="ddn-experience-section" id="services">
 
         <!-- LEFT CONTENT -->
         <div class="ddn-experience-content">
@@ -261,39 +272,68 @@
 
     </section>
 
+
     <section class="ddn-pricing-section" id="pricing">
         <div class="ddn-pricing-container">
-            <p class="ddn-eyebrow">A place to begin</p>
+
+            <!-- <p class="ddn-eyebrow">A place to begin</p> -->
+
             <h2 class="ddn-pricing-title">pricing &amp; sessions</h2>
-            <p class="ddn-pricing-intro">Therapy is a collaborative process. We can talk through your needs, goals, and
-                practical details before deciding on next steps.</p>
+
+            <p class="ddn-pricing-intro">
+                Therapy is a collaborative process. We can talk through your
+                needs, goals, and practical details before deciding on next steps.
+            </p>
+
             <div class="ddn-pricing-grid">
-                <article class="ddn-pricing-card"><span class="ddn-pricing-number">01</span>
-                    <h3>Initial Consultation</h3>
-                    <p class="ddn-pricing-detail">A first conversation to share what brings you here, ask questions, and
-                        see whether working together feels right.</p>
-                    <p class="ddn-pricing-note">Please inquire for availability</p><a href="#contact"
-                        class="ddn-pricing-link">ASK ABOUT A CONSULTATION ↗</a>
-                </article>
-                <article class="ddn-pricing-card ddn-pricing-card-featured"><span class="ddn-pricing-number">02</span>
+                <article class="ddn-pricing-card ddn-pricing-card-featured">
+
+                    <span class="ddn-pricing-number">01</span>
+
                     <h3>Individual Therapy</h3>
-                    <p class="ddn-pricing-detail">Personalized, trauma-informed support shaped around your experiences,
-                        relationships, and goals.</p>
-                    <p class="ddn-pricing-note">Session rates shared upon inquiry</p><a href="#contact"
-                        class="ddn-pricing-link">DISCUSS YOUR NEEDS ↗</a>
-                </article>
-                <article class="ddn-pricing-card"><span class="ddn-pricing-number">03</span>
-                    <h3>Clinical Consultation</h3>
-                    <p class="ddn-pricing-detail">Reflective consultation for clinicians and teams looking to deepen
-                        their practice or explore a project.</p>
-                    <p class="ddn-pricing-note">Scope and rates by arrangement</p><a href="#contact"
-                        class="ddn-pricing-link">START A CONVERSATION ↗</a>
+
+                    <p class="ddn-pricing-detail">
+                        Personalized, trauma-informed support shaped around
+                        your experiences, relationships, and goals.
+                    </p>
+
+                    <div class="ddn-pricing-fee">
+                        <span class="ddn-pricing-fee-label">SESSION FEE</span>
+                        <p class="ddn-pricing-price">800.000 VND</p>
+                        <p class="ddn-pricing-duration">
+                            <span aria-hidden="true">◷</span>
+                            Approximately 60 minutes per session
+                        </p>
+                    </div>
+
+                    <div class="ddn-pricing-support">
+                        <p class="ddn-pricing-note">
+                            Making therapy accessible
+                        </p>
+
+                        <p class="ddn-pricing-support-detail">
+                            Should finances be a barrier to participating in
+                            services, please inquire about a rate adjustment.
+                            A limited number of sliding-scale spots are
+                            available in my schedule.
+                        </p>
+                    </div>
+
+                    <a href="#contact" class="ddn-pricing-link">
+                        INQUIRE ABOUT A SESSION ↗
+                    </a>
+
                 </article>
             </div>
-            <p class="ddn-pricing-disclaimer">Fees, insurance options, and session format can be discussed directly.
-                Specific rates will be confirmed upon inquiry.</p>
+
+            <p class="ddn-pricing-disclaimer">
+                Please get in touch to discuss availability and any questions
+                about session fees.
+            </p>
+
         </div>
     </section>
+
 
 
     <section class="ddn-contact" id="contact">
@@ -412,7 +452,7 @@
     <section class="ddn-faq-section" id="faq">
         <div class="ddn-faq-container">
             <div class="ddn-faq-heading">
-                <p class="ddn-eyebrow">Good to know</p>
+                <!-- <p class="ddn-eyebrow">Good to know</p> -->
                 <h2>frequently asked<br><em>questions</em></h2>
                 <p>If you have a question that isn't answered here, please reach out. We can talk through what you need
                     to feel comfortable taking the next step.</p><a href="#contact" class="ddn-faq-contact-link">GET IN
